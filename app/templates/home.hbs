@@ -1,0 +1,11 @@
+{{!-- {{outlet}} --}}
+<div id="card-holder" class="layout-row layout-xs-column card-holder">
+  {{!-- <div class="layout-column flex-xs flex-gt-xs-50"> --}}
+      {{!-- <div class="card"> --}}
+    {{#each model as |eachMovie|}}
+        {{movie-card isDeleteButtonVisible=toggeldeleteButtonVisiblity ruchik=(action "addToFavs") movie=eachMovie}}
+    {{/each}}
+    {{!-- </div> --}}
+{{!-- </div> --}}
+{{model.a}}{{model.b}}
+</div>

@@ -1,0 +1,24 @@
+{{#paper-card as |card| }}
+    {{card.image src=(concat "https://image.tmdb.org/t/p/w500/" movie.poster_path) alt="movie poster"}}
+    {{#card.title as |title|}}
+        {{#title.text as |text|}}
+            {{#text.headline}} {{ movie.title }}{{/text.headline}}
+        {{/title.text}}
+    {{/card.title}}
+    {{#card.content}}
+        {{movie.overview}}
+    {{/card.content}}
+    {{#card.actions class="layout-column"}}
+    {{#paper-button onClick=(action "favs" movie) raised=true }}
+        Add to Favs
+    {{/paper-button}}
+     {{#if isDeleteButtonVisible }}
+        {{#paper-button  onClick=(action "delete" movie)   raised=true primary=true}}
+            Delete
+        {{/paper-button}}
+     {{/if}}
+    {{/card.actions}}
+{{/paper-card}}
+
+{{!-- onClick=(action "select" movie) --}}
+    {{!-- </div> --}}

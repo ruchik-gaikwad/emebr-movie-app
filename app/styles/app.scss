@@ -1,0 +1,41 @@
+@import 'ember-paper';
+
+.card-holder {
+   flex-flow: row wrap;
+   div {
+        width: 25%;
+        md-card {
+            img {
+                height: 300px
+            }
+            md-card-title {
+                height: 65px;
+                width: 85%;
+                // overflow: hidden;
+                md-card-title-text {
+                    width: 100%;
+                    span {
+                        width: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;    
+                    }
+                }
+                
+            }
+            md-card-content {
+                height: 100px;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+@media(max-width: 700px){
+    .card-holder {
+        flex-flow: column;
+        div {
+            width: 100%
+        }
+    }
+}

@@ -1,5 +1,22 @@
 {{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
+{{!-- {{welcome-page}} --}}
 {{!-- Feel free to remove this! --}}
 
+{{#paper-toolbar}}
+  {{#paper-toolbar-tools}}
+    
+    
+    {{!-- {{#paper-button }} --}}
+       {{#link-to 'home'}}
+       {{#paper-button }}
+            Home
+        {{/paper-button}}
+       {{/link-to}}
+    {{#link-to 'favourite'}}
+       {{#paper-button }}
+            Favourite
+        {{/paper-button}}
+       {{/link-to}}
+  {{/paper-toolbar-tools}}
+{{/paper-toolbar}}
 {{outlet}}
